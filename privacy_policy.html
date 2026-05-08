@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – Multi Fridge Organiser</title>
+  <style>
+    :root {
+      --blue: #1A73E8;
+      --blue-dark: #1558b0;
+      --bg: #f8f9fb;
+      --card: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --border: #e0e0e0;
+      --radius: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--blue);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .lang-switch button {
+      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.6);
+      color: #fff;
+      padding: 6px 22px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .lang-switch button:hover,
+    .lang-switch button.active {
+      background: rgba(255,255,255,0.35);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    section.lang { display: none; }
+    section.lang.visible { display: block; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card h2 .icon {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .card p { color: var(--muted); margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+    }
+
+    .card ul li {
+      color: var(--muted);
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #34a853;
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: #e8f0fe;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin-top: 12px;
+      color: #1558b0;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .contact-link {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-link:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Multi Fridge Organiser</h1>
+  <p>Privacy Policy &nbsp;·&nbsp; Datenschutzerklärung</p>
+  <div class="lang-switch">
+    <button id="btn-de" class="active" onclick="setLang('de')">Deutsch</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ═══════════════════ DEUTSCH ═══════════════════ -->
+  <section class="lang visible" id="de">
+
+    <div class="card">
+      <h2><span class="icon">🔒</span> Datenschutzerklärung</h2>
+      <p>
+        Diese Datenschutzerklärung gilt für die App <strong>Multi Fridge Organiser</strong>,
+        entwickelt von <strong>Fabian Giller</strong>.
+      </p>
+      <p>
+        Zuletzt aktualisiert: <strong>Mai 2025</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">📱</span> Welche Daten werden gespeichert?</h2>
+      <p>
+        Die App speichert ausschließlich die Daten, die du selbst eingibst –
+        zum Beispiel Gefrierschranknamen, Lebensmittelbezeichnungen, Mengen,
+        Kategorien und Ablaufdaten.
+      </p>
+      <p>
+        <strong>Alle Daten werden ausschließlich lokal auf deinem Gerät gespeichert</strong>
+        – in einer SQLite-Datenbank, die nur für diese App zugänglich ist.
+      </p>
+      <div class="highlight-box">
+        Keine Cloud. Keine Server. Keine Weitergabe. Nur dein Gerät.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">🚫</span> Was wird NICHT gesammelt?</h2>
+      <ul>
+        <li>Keine personenbezogenen Daten (Name, E-Mail, Standort etc.)</li>
+        <li>Keine Gerätekennungen oder Werbungs-IDs</li>
+        <li>Keine Nutzungsstatistiken oder Analysedaten</li>
+        <li>Keine Absturzberichte, die automatisch übermittelt werden</li>
+        <li>Keine Daten werden an Dritte weitergegeben oder verkauft</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">🔔</span> Benachrichtigungen</h2>
+      <p>
+        Die App kann optionale lokale Benachrichtigungen senden, um dich an
+        ablaufende Lebensmittel zu erinnern. Diese Benachrichtigungen werden
+        vollständig lokal auf deinem Gerät verarbeitet und versendet –
+        es werden keine Daten an externe Dienste übermittelt.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">🗑️</span> Datenlöschung</h2>
+      <p>
+        Du kannst alle gespeicherten Daten jederzeit löschen, indem du die App
+        deinstallierst. Dabei werden alle lokalen Daten vollständig entfernt.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">👶</span> Kinder</h2>
+      <p>
+        Die App richtet sich nicht gezielt an Kinder unter 13 Jahren.
+        Da keinerlei personenbezogene Daten gesammelt werden, besteht
+        diesbezüglich kein Risiko.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">✏️</span> Änderungen dieser Erklärung</h2>
+      <p>
+        Diese Datenschutzerklärung kann gelegentlich aktualisiert werden.
+        Änderungen werden auf dieser Seite veröffentlicht. Da keine
+        Nutzerdaten gesammelt werden, erfolgt keine individuelle Benachrichtigung.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">📬</span> Kontakt</h2>
+      <p>
+        Bei Fragen zur Datenschutzerklärung kannst du uns erreichen unter:
+      </p>
+      <p>
+        <a class="contact-link" href="mailto:fabiangiller010306@gmail.com">
+          fabiangiller010306@gmail.com
+        </a>
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════ ENGLISH ═══════════════════ -->
+  <section class="lang" id="en">
+
+    <div class="card">
+      <h2><span class="icon">🔒</span> Privacy Policy</h2>
+      <p>
+        This privacy policy applies to the app <strong>Multi Fridge Organiser</strong>,
+        developed by <strong>Fabian Giller</strong>.
+      </p>
+      <p>
+        Last updated: <strong>May 2025</strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">📱</span> What data is stored?</h2>
+      <p>
+        The app only stores data that you enter yourself – for example freezer names,
+        food item names, quantities, categories, and expiry dates.
+      </p>
+      <p>
+        <strong>All data is stored exclusively on your device</strong> –
+        in a SQLite database accessible only to this app.
+      </p>
+      <div class="highlight-box">
+        No cloud. No servers. No sharing. Your device only.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">🚫</span> What is NOT collected?</h2>
+      <ul>
+        <li>No personal data (name, email, location, etc.)</li>
+        <li>No device identifiers or advertising IDs</li>
+        <li>No usage statistics or analytics</li>
+        <li>No crash reports transmitted automatically</li>
+        <li>No data is shared with or sold to third parties</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">🔔</span> Notifications</h2>
+      <p>
+        The app can send optional local notifications to remind you about
+        expiring food items. These notifications are processed and delivered
+        entirely on your device – no data is sent to any external service.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">🗑️</span> Data deletion</h2>
+      <p>
+        You can delete all stored data at any time by uninstalling the app.
+        This will completely remove all local data from your device.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">👶</span> Children</h2>
+      <p>
+        The app is not directed at children under the age of 13.
+        Since no personal data is collected, there is no risk in this regard.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">✏️</span> Changes to this policy</h2>
+      <p>
+        This privacy policy may be updated occasionally. Any changes will be
+        published on this page. Since no user data is collected, no individual
+        notification will be sent.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">📬</span> Contact</h2>
+      <p>
+        If you have any questions about this privacy policy, you can reach us at:
+      </p>
+      <p>
+        <a class="contact-link" href="mailto:fabiangiller010306@gmail.com">
+          fabiangiller010306@gmail.com
+        </a>
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Fabian Giller &nbsp;·&nbsp; Multi Fridge Organiser
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('section.lang').forEach(s => s.classList.remove('visible'));
+    document.getElementById(lang).classList.add('visible');
+    document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+</script>
+
+</body>
+</html>
